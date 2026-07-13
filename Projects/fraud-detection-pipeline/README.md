@@ -115,19 +115,8 @@ fraud-detection-pipeline/
 ## Deploying to AKS
 
 `infra/k8s/kafka-strimzi.yaml` deploys Kafka via the [Strimzi
-operator](https://strimzi.io/) instead of a managed Kafka service — this is
-the piece worth highlighting in interviews, since it reuses Kubernetes
+operator](https://strimzi.io/) instead of a managed Kafka service, since it reuses Kubernetes
 operator/CRD knowledge directly. `infra/terraform/main.tf` is a minimal stub
 for provisioning the AKS cluster itself. Both are written to be spun up for a
 demo and torn down afterward rather than run continuously, to avoid ongoing
-cost — worth mentioning as a cost-awareness point in interviews.
-
-## Talking points this project supports
-
-* Partition strategy and consumer group scaling for the transaction topic
-* Exactly-once vs. at-least-once tradeoffs for fraud scoring (false negatives
-  are expensive; discuss idempotent consumers)
-* Windowed aggregation semantics (event time vs. processing time, watermarks)
-* Feature/train-serve skew — same feature logic must run in the offline
-  training path and the online streaming path
-* Latency budget for the FastAPI serving hop under load
+costss.
