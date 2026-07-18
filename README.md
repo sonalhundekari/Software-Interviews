@@ -1,4 +1,4 @@
-# ml-infra-systems-portfolio
+# Software-Engineering-Interviews-portfolio
 
 A small collection of production-style engineering projects alongside some interview preparation material, implemented in Python/C#. Built to learn informational level distributed systems, ML infrastructure, and operating systems fundamentals.
 
