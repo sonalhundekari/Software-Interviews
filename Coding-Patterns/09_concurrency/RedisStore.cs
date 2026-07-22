@@ -250,7 +250,8 @@ sealed class RedisStore : IDisposable
                     {
                         list.Remove(node);
                         removed++;
-                        if (limit > 0 && removed >= limit) break;
+                        if (limit > 0 && removed >= limit) 
+                            break;
                     }
                     node = next;
                 }
@@ -266,7 +267,8 @@ sealed class RedisStore : IDisposable
                     {
                         list.Remove(node);
                         removed++;
-                        if (removed >= limit) break;
+                        if (removed >= limit) 
+                            break;
                     }
                     node = prev;
                 }
